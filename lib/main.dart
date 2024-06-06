@@ -1,6 +1,8 @@
 import 'package:college_notice/screens/homescreen.dart';
 import 'package:college_notice/screens/start.dart';
-import 'package:college_notice/users.dart';
+import 'package:college_notice/screens/student.dart';
+import 'package:college_notice/screens/studlogin.dart';
+import 'package:college_notice/screens/users.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Users(),
+      home: StudLogin(),
     );
   }
 }
