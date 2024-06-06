@@ -1,4 +1,5 @@
 import 'package:college_notice/components/optionskit.dart';
+import 'package:college_notice/screens/requirementalert.dart';
 import 'package:flutter/material.dart';
 
 class Startscreen extends StatefulWidget {
@@ -69,46 +70,27 @@ class _StartscreenState extends State<Startscreen> {
               ),
             ),
             Spacer(),
-            Text(
-              "Text",
-              style: TextStyle(color: Color.fromARGB(255, 190, 190, 190)),
+            SizedBox(
+              width: 16,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: 56,
-                  width: 160,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Color.fromARGB(255, 230, 230, 230)),
-                  child: Center(
-                    child: Text(
-                      "left",
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold),
-                    ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => Requirementalert()));
+              },
+              child: Container(
+                height: 56,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.black),
+                child: Center(
+                  child: Text(
+                    "Next",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(
-                  width: 16,
-                ),
-                Container(
-                  height: 56,
-                  width: 160,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.black),
-                  child: Center(
-                    child: Text(
-                      "right",
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
             SizedBox(
               height: 26,

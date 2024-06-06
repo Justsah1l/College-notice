@@ -1,4 +1,5 @@
 import 'package:college_notice/screens/homescreen.dart';
+import 'package:college_notice/screens/requirementalert.dart';
 import 'package:college_notice/screens/start.dart';
 import 'package:college_notice/screens/student.dart';
 import 'package:college_notice/screens/studlogin.dart';
@@ -23,6 +24,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: StudLogin(),
+
+     
     );
   }
 }
