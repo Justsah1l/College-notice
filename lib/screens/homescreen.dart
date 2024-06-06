@@ -34,7 +34,7 @@ class _HomescreenState extends State<Homescreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
-            child: Image.asset("assets/Illustration.png"),
+            child: Image.asset("assets/images/Illustration.png"),
           ),
           SizedBox(
             height: 20,
