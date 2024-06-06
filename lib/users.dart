@@ -67,7 +67,7 @@ class Users extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 8,
                   backgroundColor: const Color.fromARGB(
-                      255, 234, 227, 0), // Change to the desired green color
+                      255, 234, 227, 0), // Change to the desired green color.
                 ),
                 child: const Text(
                   'Faculty',
