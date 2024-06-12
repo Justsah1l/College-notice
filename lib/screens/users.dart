@@ -1,3 +1,5 @@
+// users.dart
+import 'package:college_notice/screens/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,7 +20,10 @@ class Users extends StatelessWidget {
             height: screenHeight,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFF2196F3), Color(0xFFE91E63)],
+                colors: [
+                  Color.fromARGB(255, 255, 255, 255),
+                  Color.fromARGB(255, 255, 255, 255)
+                ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -37,7 +42,7 @@ class Users extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -48,17 +53,19 @@ class Users extends StatelessWidget {
                     const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
-                        // Navigator.pushNamed(context, MyRoutes.studlogin);
+                        Navigator.pushNamed(context, MyRoutes.studLogin);
                       },
                       style: ElevatedButton.styleFrom(
                         elevation: 8,
-                        backgroundColor: Colors.white.withOpacity(0.2),
+                        backgroundColor:
+                            Color.fromARGB(255, 2, 2, 2).withOpacity(0.9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
                       child: const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 48.0),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 12.0, horizontal: 48.0),
                         child: Text(
                           'Student',
                           style: TextStyle(
@@ -69,7 +76,7 @@ class Users extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 50),
                     Image.asset(
                       'assets/images/teach.png',
                       height: isSmallScreen ? 180 : 200,
@@ -77,17 +84,19 @@ class Users extends StatelessWidget {
                     const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
-                        // Navigator.pushNamed(context, MyRoutes.teacherlogin);
+                        Navigator.pushNamed(context, MyRoutes.studLogin);
                       },
                       style: ElevatedButton.styleFrom(
                         elevation: 8,
-                        backgroundColor: Colors.white.withOpacity(0.2),
+                        backgroundColor:
+                            const Color.fromARGB(255, 2, 2, 2).withOpacity(0.9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
                       child: const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 48.0),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 12.0, horizontal: 48.0),
                         child: Text(
                           'Faculty',
                           style: TextStyle(

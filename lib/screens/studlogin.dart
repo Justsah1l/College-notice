@@ -32,7 +32,10 @@ class StudLogin extends StatelessWidget {
             height: screenHeight,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFF2196F3), Color(0xFFE91E63)],
+                colors: [
+                  Color.fromARGB(255, 251, 251, 251),
+                  Color.fromARGB(255, 255, 255, 255)
+                ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -47,7 +50,7 @@ class StudLogin extends StatelessWidget {
                   width: isSmallScreen ? screenWidth * 0.9 : screenWidth * 0.5,
                   padding: EdgeInsets.all(isSmallScreen ? 16.0 : 32.0),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.1),
+                    color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.9),
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   child: Column(
@@ -55,29 +58,29 @@ class StudLogin extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Login',
-                        style: TextStyle(fontSize: 24, color: Colors.white),
+                        style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold,), 
                       ),
                       SizedBox(height: 16.0),
                       TextField(
                         decoration: InputDecoration(
                           hintText: 'User Name',
-                          prefixIcon: Icon(Icons.person, color: Colors.white),
+                          prefixIcon: const Icon(Icons.person, color: Colors.white),
                           filled: true,
                           fillColor: Colors.white.withOpacity(0.1),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8.0),
                             borderSide: BorderSide.none,
                           ),
-                          hintStyle: TextStyle(color: Colors.white),
+                          hintStyle: const TextStyle(color: Colors.white),
                         ),
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       ),
-                      SizedBox(height: 16.0),
+                      const SizedBox(height: 16.0),
                       TextField(
                         obscureText: true,
                         decoration: InputDecoration(
                           hintText: 'Password',
-                          prefixIcon: Icon(Icons.lock, color: Colors.white),
+                          prefixIcon: const Icon(Icons.lock, color: Colors.white),
                           filled: true,
                           fillColor: Colors.white.withOpacity(0.1),
                           border: OutlineInputBorder(
@@ -98,18 +101,21 @@ class StudLogin extends StatelessWidget {
                                 value: false,
                                 onChanged: (value) {},
                                 checkColor: Colors.white,
-                                fillColor: MaterialStateProperty.all(Colors.white),
+                                fillColor:
+                                    WidgetStateProperty.all(Colors.white),
                               ),
-                              Text('Remember Me', style: TextStyle(color: Colors.white)),
+                              const Text('Remember Me',
+                                  style: TextStyle(color: Colors.white)),
                             ],
                           ),
                           TextButton(
                             onPressed: () {},
-                            child: Text('Forgot Password?', style: TextStyle(color: Colors.white)),
+                            child: const Text('Forgot Password?',
+                                style: TextStyle(color: Colors.white)),
                           ),
                         ],
                       ),
-                      SizedBox(height: 16.0),
+                      const SizedBox(height: 16.0),
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
@@ -119,8 +125,9 @@ class StudLogin extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                         ),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 48.0),
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 12.0, horizontal: 48.0),
                           child: Text('Login'),
                         ),
                       ),
