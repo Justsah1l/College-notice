@@ -5,6 +5,7 @@ import 'package:college_notice/screens/student.dart';
 import 'package:college_notice/screens/studlogin.dart';
 import 'package:college_notice/screens/users.dart';
 import 'package:flutter/material.dart';
+import 'package:college_notice/screens/routes.dart';
 
 void main() {
   runApp(const MyApp());
